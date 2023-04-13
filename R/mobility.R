@@ -1,0 +1,46 @@
+#' Variables relating to mobility for all the different communing zones in the US
+#'
+#' Includes measurements for demographics, such as race, percentage with a college degree,
+#' as well as information on the region itself, such as the job growth in that area
+#'
+#' @format A tibble with 741 rows and 35 variables:
+#' \describe{
+#'   \item{cz}{Five-digit 1990 commuter zone code}
+#'   \item{cz_name}{String variable consisting of the name of the commuting zone.}
+#'   \item{kfr_pooled_pooled_p25}{Absolute Mobility at the 25th Percentile}
+#'   \item{bowl_per_capita}{Bowling Alleys per 100,000 residents}
+#'   \item{singleparent_share1990}{Share of Single-Headed Households with Children 1990}
+#'   \item{singleparent_share2000}{Share of Single-Headed Households with Children 2000}
+#'   \item{singleparent_share2010}{Share of Single-Headed Households with Children 2010}
+#'   \item{hhinc_mean2000}{Average Commute Time of Working Adults in 2000}
+#'   \item{frac_coll_plus2000}{Fraction of Residents w/ College Degree or More in 2000}
+#'   \item{frac_coll_plus2010}{Fraction of Residents w/ College Degree or More in 2010}
+#'   \item{foreign_share2010}{Share of Population Born Outside the U.S. in 2006-2010 ACS}
+#'   \item{med_hhinc1990}{Median Household Incomein 1990}
+#'   \item{med_hhinc2016}{Median Household Incomein 2016}
+#'   \item{poor_share2010}{Share Below Poverty Line 2006-2010 ACS}
+#'   \item{poor_share2000}{Share Below Poverty Line 2000}
+#'   \item{poor_share1990}{Share Below Poverty Line 1990}
+#'   \item{share_white2010}{Share White 2010}
+#'   \item{share_black2010}{Share Black 2010}
+#'   \item{share_asian2010}{Share Asian 2010}
+#'   \item{share_hisp2010}{Share Hispanic 2010}
+#'   \item{share_white2000}{Share White 2000}
+#'   \item{share_black2000}{Share Black 2000}
+#'   \item{share_asian2000}{Share Asian 2000}
+#'   \item{share_hisp2000}{Share Hispanic 2000}
+#'   \item{gsmn_math_g3_2013}{Average School District Level Standardized Test Scores in 3rd Grade in 2013}
+#'   \item{rent_twobed2015}{Average Rent for Two-Bedroom Apartment in 2015}
+#'   \item{traveltime15_2010}{Share of Working Adults w/ Commute Time of 15 Minutes Or Less in 2006-2010 ACS}
+#'   \item{emp2000}{Employment Rate 2000}
+#'   \item{mail_return_rate2010}{Census Form Rate Return Rate 2010}
+#'   \item{popdensity2010}{Population Density (persquare mile) in 2010}
+#'   \item{popdensity2000}{Population Density (persquare mile) in 2000}
+#'   \item{job_growth_1990_2010}{Job Growth Rate 1990-2010}
+#'   \item{ann_avg_job_growth_2004_2013}{Average Annual Job GrowthRate 2004-2013}
+#'   \item{job_density_2013}{Job Density (in square miles) in 2013}
+#'
+#' }
+#'
+#' @source {Originally published in: Chetty et al (2020) The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility}
+"mobility"
