@@ -1,7 +1,7 @@
-#' Variables relating to mobility for all the different communing zones in the US
+#' Measuring Upward Mobility in America
 #'
 #' Includes measurements for demographics, such as race, percentage with a college degree,
-#' as well as information on the region itself, such as the job growth in that area
+#' as well as information on the region itself, such as the job growth in that area, for all communiting zones in America
 #'
 #' @format A tibble with 741 rows and 35 variables:
 #' \describe{

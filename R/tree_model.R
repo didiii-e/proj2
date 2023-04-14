@@ -1,17 +1,18 @@
-#' Title
+#' Splits dataset into training and testing data, and generates a decision tree model to predict some variable,
+#' and calculates the error between the model's predicted value and the actual value
 #'
-#' @param data
-#' @param train_val
-#' @param yvar
-#' @param xvar1
-#' @param xvar2
-#' @param xvar3
+#' @param data A data frame
+#' @param train_val  proportion of the data set to use as training for the model
+#' @param yvar variable being predicted by model
+#' @param xvar1 prediction variable to generate the model
+#' @param xvar2 prediction variable to generate the model
+#' @param xvar3 prediction variable to generate the model
 #'
 #' @return data.frame
 #' @export
 #'
 #' @examples
-tree_model <- function(data, train_val, yvar, xvar1, xvar2, xvar3) {
+tree_model <- function(data, train_val = .8, yvar, xvar1, xvar2, xvar3) {
 
   #Uniformly distributed random number between 0 and 1
   data$train_flag <- stats::runif(nrow(data))

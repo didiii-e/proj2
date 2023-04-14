@@ -1,18 +1,18 @@
-
-#' Title
+#' Takes a dataset, splits it into training and testing data and generates a linear regression model,
+#' then calculates the error between the model's prediction and the actual value for both the training and testing data
 #'
-#' @param data
-#' @param train_val
-#' @param yvar
-#' @param xvar1
-#' @param xvar2
-#' @param xvar3
+#' @param data A data frame
+#' @param train_val  proportion of the data set to use as training for the model
+#' @param yvar variable being predicted by model
+#' @param xvar1 prediction variable to generate the model
+#' @param xvar2 prediction variable to generate the model
+#' @param xvar3 prediction variable to generate the model
 #'
 #' @return data.frame
 #' @export
 #'
 #' @examples
-linreg_model <- function(data, train_val, yvar, xvar1, xvar2, xvar3) {
+linreg_model <- function(data, train_val = .8, yvar, xvar1, xvar2, xvar3) {
 
   #Uniformly distributed random number between 0 and 1
   data$train_flag <- stats::runif(nrow(data))
