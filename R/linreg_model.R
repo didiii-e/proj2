@@ -14,6 +14,38 @@
 #' @examples
 linreg_model <- function(data, train_val = .8, yvar, xvar1, xvar2, xvar3) {
 
+  #######error check
+  # Add in error if not character or factor for x
+  yvar_data <- data |>
+    dplyr::pull({{ yvar }})
+  xvar1_data <- data |>
+    dplyr::pull({{ xvar1 }})
+  xvar2_data <- data |>
+    dplyr::pull({{ xvar2 }})
+  xvar3_data <- data |>
+    dplyr::pull({{ xvar3}})
+
+  if(!(is.numeric(yvar) | is.integer(yvar))){
+    stop('y variable needs to of class numeric or integer')
+  }
+
+  if(!(is.numeric(xvar1) | is.integer(xvar1))){
+    stop('first x variable needs to of class numeric or integer')
+  }
+
+  if(!(is.numeric(xvar2) | is.integer(xvar2))){
+    stop('second x variable needs to of class numeric or integer')
+  }
+
+  if(!(is.numeric(xvar3) | is.integer(xvar3))){
+    stop('third x variable needs to of class numeric or integer')
+  }
+
+  if(train_val > 1 | train_val < 0) {
+    stop('train_val value must be between 0 and 1')
+  }
+
+
   #Uniformly distributed random number between 0 and 1
   data$train_flag <- stats::runif(nrow(data))
   data$train_flag <-ifelse(data$train_flag > train_val, 1, 0)
